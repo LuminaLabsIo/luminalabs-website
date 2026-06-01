@@ -89,6 +89,186 @@ export default function Home() {
         "24/7 autonomous operation"
       ],
       price: "Starting at $9,997"
+    },
+    {
+      icon: "🎵",
+      title: "Music Producer Platform",
+      problem: "Beatstars taking 30% of your beat sales?",
+      solution: "Your own beat marketplace",
+      features: [
+        "Beat & sample store",
+        "Lease & exclusive licensing",
+        "Audio player with waveforms",
+        "Instant download delivery",
+        "Producer dashboard",
+        "Keep all your profits"
+      ],
+      price: "Starting at $4,997"
+    },
+    {
+      icon: "🏠",
+      title: "Real Estate Platform",
+      problem: "Paying for Zillow Premium or outdated websites?",
+      solution: "Custom property showcase site",
+      features: [
+        "Property listings & search",
+        "Virtual tour integration",
+        "Lead capture & CRM",
+        "Mortgage calculator",
+        "Client portal",
+        "Mobile-optimized viewing"
+      ],
+      price: "Starting at $5,997"
+    },
+    {
+      icon: "💅",
+      title: "Beauty Salon Booking",
+      problem: "Booksy or Square taking fees + monthly costs?",
+      solution: "Your own booking platform",
+      features: [
+        "Online appointment booking",
+        "Service menu & pricing",
+        "Automated reminders",
+        "Client history tracking",
+        "Product sales",
+        "Membership subscriptions"
+      ],
+      price: "Starting at $3,997"
+    },
+    {
+      icon: "🍽️",
+      title: "Chef/Restaurant Platform",
+      problem: "Recipe content lost on social media?",
+      solution: "Premium cooking platform",
+      features: [
+        "Recipe subscription tiers",
+        "Live cooking class streaming",
+        "Meal planning tools",
+        "Shopping list generator",
+        "Community features",
+        "Digital cookbook sales"
+      ],
+      price: "Starting at $4,997"
+    },
+    {
+      icon: "📸",
+      title: "Photographer Portfolio",
+      problem: "Smugmug or Zenfolio monthly fees?",
+      solution: "Custom client gallery system",
+      features: [
+        "Password-protected galleries",
+        "Online booking system",
+        "Print shop integration",
+        "Photo downloads & sharing",
+        "Client proofing",
+        "Package pricing"
+      ],
+      price: "Starting at $3,997"
+    },
+    {
+      icon: "🎮",
+      title: "Gaming Community",
+      problem: "Discord + Patreon = complicated setup?",
+      solution: "All-in-one gaming platform",
+      features: [
+        "Tournament management",
+        "Coaching marketplace",
+        "Merchandise store",
+        "Member subscriptions",
+        "Video guides library",
+        "Community forums"
+      ],
+      price: "Starting at $5,997"
+    },
+    {
+      icon: "💼",
+      title: "Consulting Portal",
+      problem: "Calendly + payment tools = fragmented experience?",
+      solution: "Professional consulting hub",
+      features: [
+        "Session booking system",
+        "Payment & invoicing",
+        "Client resource library",
+        "Progress tracking",
+        "Document sharing",
+        "Video call integration"
+      ],
+      price: "Starting at $4,997"
+    },
+    {
+      icon: "🧘",
+      title: "Wellness Coach Platform",
+      problem: "Mindbody taking 5% per transaction?",
+      solution: "Custom wellness hub",
+      features: [
+        "Program enrollment",
+        "Habit tracking",
+        "Meditation library",
+        "Client check-ins",
+        "Progress analytics",
+        "Community support"
+      ],
+      price: "Starting at $4,997"
+    },
+    {
+      icon: "🎤",
+      title: "Podcast Platform",
+      problem: "Patreon fees + hosting costs piling up?",
+      solution: "Your own podcast hub",
+      features: [
+        "Premium episode access",
+        "Transcripts & show notes",
+        "Member community",
+        "Ad-free listening",
+        "Bonus content library",
+        "Direct listener support"
+      ],
+      price: "Starting at $3,997"
+    },
+    {
+      icon: "📝",
+      title: "Writer/Author Site",
+      problem: "Substack taking 10% of subscriptions?",
+      solution: "Independent publishing platform",
+      features: [
+        "Newsletter management",
+        "Premium content tiers",
+        "E-book sales",
+        "Serial story releases",
+        "Reader comments",
+        "Full email list ownership"
+      ],
+      price: "Starting at $3,997"
+    },
+    {
+      icon: "🏋️",
+      title: "Personal Trainer App",
+      problem: "Trainerize costing $60-300/month?",
+      solution: "Your own training platform",
+      features: [
+        "Custom workout builder",
+        "Exercise video library",
+        "Progress photos & tracking",
+        "Nutrition planning",
+        "Client messaging",
+        "Form check submissions"
+      ],
+      price: "Starting at $5,997"
+    },
+    {
+      icon: "🐾",
+      title: "Pet Services Platform",
+      problem: "Rover taking 20% commission?",
+      solution: "Direct client booking system",
+      features: [
+        "Service booking (grooming, training, sitting)",
+        "Pet profile management",
+        "Availability calendar",
+        "Payment processing",
+        "Review system",
+        "Repeat client automation"
+      ],
+      price: "Starting at $3,997"
     }
   ];
 

@@ -120,7 +120,7 @@ export default function Footer() {
               hello@luminalabs.com
             </a>
             
-            {/* Social Links (Optional - you can remove if you don't have socials yet) */}
+            {/* Social Links */}
             <div style={{
               display: 'flex',
               gap: '1rem',
@@ -155,25 +155,14 @@ export default function Footer() {
         <div style={{
           borderTop: '1px solid #334155',
           paddingTop: '2rem',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          flexWrap: 'wrap',
-          gap: '1rem'
+          textAlign: 'center'
         }}>
           <p style={{
             color: '#64748b',
             fontSize: '0.875rem',
             margin: 0
           }}>
-            © {new Date().getFullYear()} Lumina Labs. All rights reserved.
-          </p>
-          <p style={{
-            color: '#64748b',
-            fontSize: '0.875rem',
-            margin: 0
-          }}>
-            Made with ❤️ for iOS
+            © 2024 Lumina Labs. All rights reserved.
           </p>
         </div>
       </div>
