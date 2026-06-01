@@ -3,8 +3,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Lumina Labs ✨ - Magical Digital Experiences",
-  description: "Creating fun, playful, and useful apps for iOS and web.",
+  title: "Lumina Labs - iOS App Development",
+  description: "Professional iOS application development studio",
 };
 
 export default function RootLayout({
@@ -16,9 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <main className="pt-20">
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   );
