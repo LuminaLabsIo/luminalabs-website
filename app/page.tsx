@@ -4,7 +4,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="mb-6">
+          <h1 className="text-5xl font-bold text-slate-900 mb-6">
             Building exceptional mobile experiences
           </h1>
           <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
@@ -23,7 +23,9 @@ export default function Home() {
       {/* What We Do */}
       <section className="py-20 px-6 bg-slate-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-center mb-16">What We Do</h2>
+          <h2 className="text-4xl font-semibold text-slate-900 text-center mb-16">
+            What We Do
+          </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
             {/* Card 1 */}
@@ -31,8 +33,10 @@ export default function Home() {
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">📱</span>
               </div>
-              <h3 className="mb-3">iOS Development</h3>
-              <p className="text-slate-600">
+              <h3 className="text-2xl font-semibold text-slate-800 mb-3">
+                iOS Development
+              </h3>
+              <p className="text-lg text-slate-600">
                 Native iOS apps built with Swift and SwiftUI for optimal performance.
               </p>
             </div>
@@ -42,8 +46,10 @@ export default function Home() {
               <div className="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">🎨</span>
               </div>
-              <h3 className="mb-3">Design</h3>
-              <p className="text-slate-600">
+              <h3 className="text-2xl font-semibold text-slate-800 mb-3">
+                Design
+              </h3>
+              <p className="text-lg text-slate-600">
                 Beautiful, intuitive interfaces that users love to interact with.
               </p>
             </div>
@@ -53,8 +59,10 @@ export default function Home() {
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">⚡</span>
               </div>
-              <h3 className="mb-3">Innovation</h3>
-              <p className="text-slate-600">
+              <h3 className="text-2xl font-semibold text-slate-800 mb-3">
+                Innovation
+              </h3>
+              <p className="text-lg text-slate-600">
                 Pushing boundaries with creative solutions to real-world problems.
               </p>
             </div>
@@ -65,7 +73,9 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="mb-6">Ready to work together?</h2>
+          <h2 className="text-4xl font-semibold text-slate-900 mb-6">
+            Ready to work together?
+          </h2>
           <p className="text-xl text-slate-600 mb-8">
             Get in touch to discuss your next project.
           </p>
