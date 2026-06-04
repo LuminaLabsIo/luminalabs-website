@@ -95,6 +95,17 @@ export default function Footer() {
               >
                 Privacy Policy
               </a>
+              <a 
+                href="/play" 
+                style={{
+                  color: '#94a3b8',
+                  textDecoration: 'none',
+                  fontSize: '0.875rem',
+                  transition: 'color 0.2s'
+                }}
+              >
+                Feel playful? 🎮
+              </a>
             </nav>
           </div>
 
@@ -108,7 +119,7 @@ export default function Footer() {
               Contact
             </h3>
             <a 
-              href="mailto:hello@luminalabs.com"
+              href="mailto:petra@lumina-labs.org"
               style={{
                 color: '#94a3b8',
                 textDecoration: 'none',
