@@ -117,7 +117,7 @@ export default function Footer() {
                 marginBottom: '1rem'
               }}
             >
-              hello@luminalabs.com
+              petra@lumina-labs.org
             </a>
             
             {/* Social Links */}

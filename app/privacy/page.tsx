@@ -108,7 +108,7 @@ export default function PrivacyPolicy() {
                 href="mailto:hello@luminalabs.com" 
                 style={{ color: '#3b82f6', textDecoration: 'none' }}
               >
-                hello@luminalabs.com
+                petra@lumina-labs.org
               </a>
             </p>
 
