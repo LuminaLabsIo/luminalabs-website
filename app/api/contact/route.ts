@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase';
 import { Resend } from 'resend';
 import { checkRateLimit } from '@/lib/rateLimit';
 
@@ -59,18 +58,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const { error: dbError } = await supabase
-      .from('contact_submissions')
-      .insert([{ name, email, message }]);
-
-    if (dbError) {
-      console.error('Database error:', dbError);
-      return NextResponse.json(
-        { error: 'Failed to save submission' },
-        { status: 500 }
-      );
-    }
-
+    // Send email only
     const { error: emailError } = await resend.emails.send({
       from: 'Lumina Labs <noreply@lumina-labs.org>',
       to: 'petra@lumina-labs.org',
@@ -86,6 +74,10 @@ export async function POST(request: Request) {
 
     if (emailError) {
       console.error('Email error:', emailError);
+      return NextResponse.json(
+        { error: 'Failed to send email' },
+        { status: 500 }
+      );
     }
 
     return NextResponse.json({ success: true });
