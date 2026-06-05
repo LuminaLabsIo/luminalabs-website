@@ -77,7 +77,7 @@ export default function Navbar() {
             Privacy
           </a>
           <a 
-            href="mailto:hello@luminalabs.com" 
+            href="/contact" 
             style={{
               padding: '0.5rem 1rem',
               backgroundColor: '#3b82f6',
@@ -182,7 +182,7 @@ export default function Navbar() {
             Privacy
           </a>
           <a 
-            href="mailto:hello@luminalabs.com" 
+            href="/contact" 
             onClick={() => setIsMenuOpen(false)}
             style={{
               padding: '0.75rem',
