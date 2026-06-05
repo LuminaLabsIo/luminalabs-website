@@ -1,24 +1,36 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function ContactForm() {
   const [status, setStatus] = useState('');
   const [loading, setLoading] = useState(false);
-  const [turnstileLoaded, setTurnstileLoaded] = useState(false);
+  const widgetRef = useRef<string | null>(null);
 
   useEffect(() => {
+    // Load Turnstile script
     const script = document.createElement('script');
-    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileLoad';
     script.async = true;
     script.defer = true;
-    script.onload = () => setTurnstileLoaded(true);
+
+    // Create global callback
+    (window as any).onTurnstileLoad = () => {
+      if ((window as any).turnstile && document.getElementById('turnstile-widget')) {
+        widgetRef.current = (window as any).turnstile.render('#turnstile-widget', {
+          sitekey: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY,
+          theme: 'light',
+        });
+      }
+    };
+
     document.body.appendChild(script);
 
     return () => {
       if (document.body.contains(script)) {
         document.body.removeChild(script);
       }
+      delete (window as any).onTurnstileLoad;
     };
   }, []);
 
@@ -29,19 +41,19 @@ export default function ContactForm() {
 
     const formData = new FormData(e.currentTarget);
     
-    // Wait a bit for Turnstile to be ready
-    await new Promise(resolve => setTimeout(resolve, 500));
-    
-    const turnstileToken = (window as any).turnstile?.getResponse();
+    // Get token
+    let turnstileToken = null;
+    try {
+      if ((window as any).turnstile && widgetRef.current) {
+        turnstileToken = (window as any).turnstile.getResponse(widgetRef.current);
+      }
+    } catch (error) {
+      console.error('Turnstile error:', error);
+    }
     
     if (!turnstileToken) {
-      setStatus('Please wait for verification to complete');
+      setStatus('Please complete the security check');
       setLoading(false);
-      
-      // Reset Turnstile if it exists
-      if ((window as any).turnstile) {
-        (window as any).turnstile.reset();
-      }
       return;
     }
 
@@ -62,8 +74,8 @@ export default function ContactForm() {
       if (response.ok) {
         setStatus('Message sent successfully! ✅');
         (e.target as HTMLFormElement).reset();
-        if ((window as any).turnstile) {
-          (window as any).turnstile.reset();
+        if ((window as any).turnstile && widgetRef.current) {
+          (window as any).turnstile.reset(widgetRef.current);
         }
       } else {
         setStatus(data.error || 'Failed to send message ❌');
@@ -135,14 +147,7 @@ export default function ContactForm() {
         />
       </div>
 
-      {turnstileLoaded && (
-        <div 
-          className="cf-turnstile" 
-          data-sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
-          data-theme="light"
-          style={{ marginBottom: '20px' }}
-        />
-      )}
+      <div id="turnstile-widget" style={{ marginBottom: '20px' }}></div>
 
       <button
         type="submit"
