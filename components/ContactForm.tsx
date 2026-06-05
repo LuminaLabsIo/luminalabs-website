@@ -28,11 +28,20 @@ export default function ContactForm() {
     setStatus('');
 
     const formData = new FormData(e.currentTarget);
+    
+    // Wait a bit for Turnstile to be ready
+    await new Promise(resolve => setTimeout(resolve, 500));
+    
     const turnstileToken = (window as any).turnstile?.getResponse();
     
     if (!turnstileToken) {
-      setStatus('Please complete the verification');
+      setStatus('Please wait for verification to complete');
       setLoading(false);
+      
+      // Reset Turnstile if it exists
+      if ((window as any).turnstile) {
+        (window as any).turnstile.reset();
+      }
       return;
     }
 
@@ -53,7 +62,9 @@ export default function ContactForm() {
       if (response.ok) {
         setStatus('Message sent successfully! ✅');
         (e.target as HTMLFormElement).reset();
-        (window as any).turnstile?.reset();
+        if ((window as any).turnstile) {
+          (window as any).turnstile.reset();
+        }
       } else {
         setStatus(data.error || 'Failed to send message ❌');
       }
