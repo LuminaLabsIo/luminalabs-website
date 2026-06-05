@@ -20,7 +20,7 @@ export async function POST(request: Request) {
 
     // Send email via Resend
     const { data, error } = await resend.emails.send({
-      from: 'Contact Form <noreply@rlumina-labs.org>',
+      from: 'Contact Form <noreply@lumina-labs.org>',
       to: 'petra@lumina-labs.org',
       subject: `New Contact Form Submission from ${name}`,
       html: `
