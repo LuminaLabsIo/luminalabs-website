@@ -1,4 +1,19 @@
+import type { Metadata } from "next";
 import ContactForm from '../../components/ContactForm';
+
+export const metadata: Metadata = {
+  title: "Contact Us | Lumina Labs - Get Your Free Consultation",
+  description: "Ready to build your custom platform or iOS app? Contact Lumina Labs for a free consultation. We respond within 24 hours. Start your project today.",
+  keywords: "contact Lumina Labs, free consultation, custom app quote, platform development inquiry",
+  openGraph: {
+    title: "Contact Lumina Labs - Free Consultation",
+    description: "Get a custom quote for your platform or iOS app. Free consultation, 24-hour response time.",
+    url: "https://lumina-labs.org/contact",
+    siteName: "Lumina Labs",
+    locale: "en_US",
+    type: "website",
+  },
+};
 
 export default function ContactPage() {
   return (
@@ -31,7 +46,7 @@ export default function ContactPage() {
             maxWidth: '600px',
             margin: '0 auto'
           }}>
-            Ready to bring your app idea to life? Let's chat about your project!
+            Ready to bring your app idea to life? Let's talk about your project!
           </p>
         </div>
 

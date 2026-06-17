@@ -1,3 +1,19 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Lumina Labs - Your Data Protection",
+  description: "Lumina Labs privacy policy. Learn how we collect, use, and protect your data. GDPR compliant. App Store approved privacy practices.",
+  keywords: "privacy policy, data protection, GDPR, App Store privacy, user data security",
+  openGraph: {
+    title: "Privacy Policy | Lumina Labs",
+    description: "Our commitment to protecting your privacy and data security.",
+    url: "https://lumina-labs.org/privacy",
+    siteName: "Lumina Labs",
+    locale: "en_US",
+    type: "website",
+  },
+};
+
 export default function PrivacyPolicy() {
   return (
     <main style={{ minHeight: '100vh', backgroundColor: 'white' }}>

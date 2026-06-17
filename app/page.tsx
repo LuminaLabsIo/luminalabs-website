@@ -1,3 +1,33 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Custom Platform Development | Lumina Labs - Own Your Revenue",
+  description: "Stop paying 20-30% platform fees. We build custom digital platforms with AI agents - e-commerce, course platforms, creator sites, and more. One-time cost, 100% ownership.",
+  keywords: "custom platform development, AI platform, alternative to OnlyFans, alternative to Etsy, custom e-commerce, course platform, creator platform, no platform fees",
+  openGraph: {
+    title: "Own Your Platform, Keep Your Revenue | Lumina Labs",
+    description: "Stop paying platform fees. Custom digital platforms starting at $2,997. AI-powered, fully owned by you.",
+    url: "https://lumina-labs.org",
+    siteName: "Lumina Labs",
+    images: [
+      {
+        url: "https://lumina-labs.org/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Lumina Labs - Custom Platform Development",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Own Your Platform, Keep Your Revenue",
+    description: "Custom digital platforms with AI agents. No monthly fees.",
+    images: ["https://lumina-labs.org/og-image.jpg"],
+  },
+};
+
 export default function Home() {
   const platforms = [
     {

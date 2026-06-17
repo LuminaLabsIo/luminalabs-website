@@ -1,3 +1,33 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Custom iOS App Development | Lumina Labs - Native Mobile Apps",
+  description: "Professional iOS app development starting at $7,997. Fitness apps, meditation apps, social platforms, e-commerce apps, and more. Native Swift development with App Store deployment.",
+  keywords: "iOS app development, custom iPhone app, native iOS app, fitness app development, meditation app, Swift development, App Store deployment",
+  openGraph: {
+    title: "Custom iOS App Development | Lumina Labs",
+    description: "Native iOS apps built with Swift. Fitness, meditation, social, e-commerce, and custom business apps. Starting at $7,997.",
+    url: "https://lumina-labs.org/apps",
+    siteName: "Lumina Labs",
+    images: [
+      {
+        url: "https://lumina-labs.org/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Lumina Labs iOS App Development",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Custom iOS App Development",
+    description: "Native iPhone apps starting at $7,997. Professional development, App Store ready.",
+    images: ["https://lumina-labs.org/og-image.jpg"],
+  },
+};
+
 export default function Apps() {
   const iosApps = [
     {
