@@ -16,6 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-site-verification" content="TYXM5HywlDIMdNIpbV_kp5CgzABeLbEEMKGzXTkERK8" />
+      </head>
       <body style={{ 
         display: 'flex', 
         flexDirection: 'column', 
